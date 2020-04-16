@@ -1,0 +1,23 @@
+<div class="col-md-4 mx-auto alert alert-success" *ngIf="msg != undefined">
+  {{msg}}
+</div>
+<table class="table table-primary table-striped table-hover col-md-8 mx-auto mt-3">
+  <tr>
+    <th>Emp ID</th>
+    <th>Emp Name</th>
+    <th>Salary</th>
+    <th>Dept</th>
+    <th>Doj</th>
+    <th>Delete</th>
+    <th>Edit</th>
+  </tr>
+  <tr *ngFor="let emp of employees">
+    <td>{{emp.empId}}</td>
+    <td>{{emp.empName | titlecase}}</td>
+    <td>{{emp.empSal | currency:'INR'}}</td>
+    <td>{{emp.dept.deptName | titlecase}}</td>
+    <td>{{emp.strDoj}}</td>
+    <td><a class="btn btn-danger text-while" (click)="deleteById(emp.empId)">Delete</a></td>
+    <td><a class="btn btn-warning text-while" routerLink="/editemployee/{{emp.empId}}">Edit</a></td>
+  </tr>
+</table>

@@ -1,0 +1,20 @@
+<section class="col-md-4 mx-auto">
+  <h2 class="text-center">Transfer Account</h2>
+  <div class="alert alert-success" *ngIf="msg != undefined">{{msg}}</div>
+  <div class="alert alert-danger" *ngIf="errorMsg != undefined" [innerHTML]="errorMsg"></div>
+  <form #frm="ngForm" (ngSubmit)="transfer()">
+     <div>From Account ID</div>
+     <div><input type="number" name="fromAcc" [(ngModel)]="trans.fromAccountId" required #modelfromid="ngModel" class="form-control"/></div>
+     <div class="alert alert-danger" *ngIf="modelfromid.invalid && modelfromid.touched">From Account ID is required</div>
+
+     <div>To Account ID</div>
+     <div><input type="text" name="toAcc" [(ngModel)]="trans.toAccountId" required #mltoid="ngModel" class="form-control"/></div>
+     <div class="alert alert-danger" *ngIf="mltoid.invalid && mltoid.touched">To Account ID is required</div>
+
+     <div>Amount</div>
+     <div><input type="number" name="amount" [(ngModel)]="trans.amt" required #mlamt="ngModel" class="form-control"/></div>
+     <div class="alert alert-danger" *ngIf="mlamt.invalid && mlamt.touched">Amount is required</div>
+
+     <div class="mt-2 text-center"><input type="submit" value="Transfer Account" [disabled]="!frm.valid" class="btn btn-danger"/></div>
+  </form>
+</section>

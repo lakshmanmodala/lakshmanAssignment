@@ -1,0 +1,38 @@
+[
+    {
+        "pid": 1001,
+        "pname": "acer laptop",
+        "price": 32000,
+        "cat": "computer"
+    },
+    {
+        "pid": 1002,
+        "pname": "dell laptop",
+        "price": 35000,
+        "cat": "computer"
+    },
+    {
+        "pid": 1003,
+        "pname": "apple laptop",
+        "price": 34000,
+        "cat": "computer"
+    },
+    {
+        "pid": 1004,
+        "pname": "samsung phone",
+        "price": 22000,
+        "cat": "mobile"
+    },
+    {
+        "pid": 1005,
+        "pname": "nokia phone",
+        "price": 12000,
+        "cat": "mobile"
+    },
+    {
+        "pid": 1006,
+        "pname": "sony phone",
+        "price": 42000,
+        "cat": "mobile"
+    }
+]

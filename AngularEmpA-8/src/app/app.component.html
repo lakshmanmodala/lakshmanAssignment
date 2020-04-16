@@ -1,0 +1,15 @@
+<header>
+  <h1 class="jumbotron bg-light text-center">{{title}}</h1>
+</header>
+
+<section>
+  <nav class="col-md-10 mx-auto bg-dark p-2 row">
+  <a class="nav-item nav-link text-while" routerLink="getbyid">ViewByID</a>
+  <a class="nav-item nav-link text-while" routerLink="getall">ViewAllEmployee</a>
+  <a class="nav-item nav-link text-while" routerLink="getbydept">ViewByDept</a>
+  <a class="nav-item nav-link text-while" routerLink="addemployee">All Employee</a>
+  </nav>
+</section>
+<section>
+  <router-outlet></router-outlet>
+</section>
